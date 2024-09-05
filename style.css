@@ -1,0 +1,76 @@
+/*Configurar el copntenedor*/
+.cuadro{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 255, 162);
+
+    /*Llamar la animacion*/
+    animation-name: mover;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+/*Crear la animacion*/
+@keyframes mover{
+    /*Definir los puntos de ancla*/
+    0%{
+        left: 0%;
+        background-color: rgb(0, 255, 162);  
+    }
+    50%{
+        left: 50%;
+        background-color: blue;
+        border-radius: 50%;
+    }
+    100%{
+        left: 100%;
+        background-color: aquamarine;
+    }
+}
+
+.banner{
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    border: 3px solid blue;
+    border-radius: 20%;
+    background-image: url(imagenes/R.jpeg);
+    background-size: 100% 100%;
+
+    animation: banner 20s infinite;
+}
+
+
+/*Definir la transicion*/
+
+@keyframes banner{
+    0%, 24%{
+        background-image: url(imagenes/R\ \(1\).jpeg);
+        opacity: 1;
+    }
+    25%, 29%{
+        opacity: 0.7;
+    }
+    30%, 54%{
+        background-image: url(imagenes/R\ \(2\).jpeg);
+        opacity: 1;
+    }
+    55%, 59%{
+        opacity: 0.8;
+    }
+    60%, 84%{
+        background-image: url(imagenes/R\ \(3\).jpeg);
+        opacity: 1;
+    }
+    85%, 89%{
+        opacity: 0.3;
+    }
+    90%, 99%{
+        background-image: url(imagenes/R\ \(3\).jpeg);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.9;
+    }
+}
